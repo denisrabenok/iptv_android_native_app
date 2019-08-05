@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="572">
+        <RelativeLayout
+            android:id="@+id/view_pan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="166">
+            <LinearLayout
+                android:id="@+id/introPan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="352"
+                android:background="#10ffffff">
+                <RelativeLayout
+                    android:id="@+id/guide_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="103">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/newmark"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"/>
+                    <TextView
+                        android:id="@+id/tv_tvguide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TV Guide"
+                        android:textColor="@android:color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textSize="50sp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/allchannel_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="22">
+                    <TextView
+                        android:id="@+id/txtAllChannels"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All channels"
+                        android:textColor="@android:color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:textSize="30sp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/tapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="90"
+                    android:background="#000">
+                    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                        android:id="@+id/video_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="31"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="79"
+                    android:orientation="horizontal"
+                    android:weightSum="166">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="38"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="90"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/newlogo"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="38"/>
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/date_time_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="27">
+                    <TextView
+                        android:id="@+id/txtDate_Time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/ivDivider"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/nav_divider"
+                android:layout_alignRight="@+id/introPan"
+                android:layout_marginRight="-15dp"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/main_pan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="406"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/categoryPan"
+                android:layout_width="180dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/categoryRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="15dp"
+                    android:weightSum="315">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="45"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/categoryRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="270"
+                        android:animateLayoutChanges="false"
+                        android:scrollbars="none">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/nav_divider"
+                    android:layout_alignRight="@+id/categoryRecycler"
+                    android:scaleType="fitXY"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/mainPan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/descriptionPan"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="horizontal"
+                    android:weightSum="407">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="300">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="300">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="20">
+
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="280"
+                                android:orientation="vertical"
+                                android:weightSum="84">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="15"/>
+                                <TextView
+                                    android:id="@+id/txtTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="20"
+                                    android:textSize="22sp"
+                                    android:text=""
+                                    android:inputType="textNoSuggestions"
+                                    android:textColor="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/txtDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="39"
+                                    android:textSize="20sp"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:text=""
+                                    android:textColor="@color/colorWhite"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="107">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="107">
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="10"
+                                android:orientation="vertical"
+                                android:weightSum="84">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="28">
+
+                                </RelativeLayout>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="50"
+                                    android:src="@drawable/glass_left"/>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="6">
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="97"
+                                android:weightSum="97"
+                                android:orientation="horizontal">
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5">
+
+                                </RelativeLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="92"
+                                    android:orientation="vertical"
+                                    android:weightSum="84">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="22">
+
+                                    </LinearLayout>
+                                    <ImageView
+                                        android:id="@+id/img_ico"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="17"/>
+                                    <TextView
+                                        android:id="@+id/txtDuration"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="15"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="20sp"/>
+                                    <TextView
+                                        android:id="@+id/txtStartTime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="15"
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="20sp"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/glass_feather"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--To display Channels list-->
+                    <LinearLayout
+                        android:id="@+id/channelPan"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!--Position (0,0)-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2">
+                            <TextView
+                                android:id="@+id/tv_change_date"
+                                android:layout_width="match_parent"
+                                android:text="Today"
+                                android:gravity="center"
+                                android:textColor="@color/colorWhite"
+                                android:layout_height="match_parent"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="10dp"
+                                android:layout_alignParentBottom="true"
+                                android:src="@drawable/glass_feather"/>
+                        </RelativeLayout>
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcv_channel_name"
+                            android:scrollbars="none"
+                            android:animateLayoutChanges="false"
+                            android:layout_weight="10"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"/>
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/nav_divider"
+                        android:scaleType="fitXY"/>
+
+
+                    <!--To display Time and Programs list-->
+                    <HorizontalScrollView
+                        android:id="@+id/schedulePan"
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <!--Time horizontal list-->
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rcv_time"
+                                    android:scrollbars="none"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="2"
+                                    android:layout_height="0dp"/>
+
+                                <!--Vertical list whose each elements are horizontal list to show programs-->
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/rcv_program"
+                                    android:scrollbars="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="10"
+                                    android:layout_height="0dp"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/timeline"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@android:color/holo_blue_dark"
+                                android:layout_marginLeft="0dp"
+                                android:layout_alignParentLeft="true"/>
+                        </RelativeLayout>
+
+
+
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

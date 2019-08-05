@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">IPTV</string>
+
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="giraffe_player_url_empty">Please specify the address of the video playback</string>
+    <string name="small_problem">Player encountered a small problem</string>
+    <string name="can_not_play">can not play this video</string>
+    <string name="not_support">player not support this device</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Pay Via Paypal</string>
+    <string name="action_trial">7 days Trial Version</string>
+    <string name="action_Log_out">Exit</string>
+
+    <!-- String related to setting -->
+    <string name="playlisturl">PlayListURL</string>
+    <string name="epgurl">EpgURL</string>
+    <string name="sync">Sync</string>
+</resources>

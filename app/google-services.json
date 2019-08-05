@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "629520291902",
+    "firebase_url": "https://myiptv-1860d.firebaseio.com",
+    "project_id": "myiptv-1860d",
+    "storage_bucket": "myiptv-1860d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629520291902:android:bdc6f9ec77eb57ab",
+        "android_client_info": {
+          "package_name": "dreamfuture.iptv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629520291902-ukpkkc09teojoai6prjnfmvocogoqumv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dreamfuture.iptv",
+            "certificate_hash": "eb3a21742e712e5a8dde3d228357d2cc3e968a0c"
+          }
+        },
+        {
+          "client_id": "629520291902-bgmkfkqa8omrhkm94n10g83bvj4pcqao.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dreamfuture.iptv",
+            "certificate_hash": "e0775a15668cc698b7ecb1e9a244cb3fcffb5265"
+          }
+        },
+        {
+          "client_id": "629520291902-j2of1dmuvqbuhdii9vd6ild5amndrid1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeS5RXhuim1KddaOJTqYY85M7XLG1Fqg8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629520291902-j2of1dmuvqbuhdii9vd6ild5amndrid1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
